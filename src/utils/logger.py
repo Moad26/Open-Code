@@ -27,4 +27,7 @@ def setup_logger():
         level="DEBUG",
         serialize=True,
     )
-    pass
+    return logger
+
+
+logger = setup_logger()

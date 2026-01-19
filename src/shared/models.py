@@ -3,7 +3,6 @@ from pydantic import BaseModel, Field, field_validator
 
 class MetaData(BaseModel):
     title: str = Field(default="Unknown", description="The book's name")
-    author: str = Field(default="Unknown", description="The author name")
     nbr_pages: int = Field(default=1, description="Da number of PAGES", ge=1)
 
     @field_validator("title", "author")

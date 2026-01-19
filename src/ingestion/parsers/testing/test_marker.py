@@ -4,7 +4,7 @@ from marker.converters.pdf import PdfConverter
 from marker.models import create_model_dict
 from marker.output import text_from_rendered
 
-pdf_path = "data/Word2Vec.pdf"
+pdf_path = "../../../data/Word2Vec.pdf"
 output_dir = Path("output_markdown")
 output_dir.mkdir(exist_ok=True)
 
@@ -16,4 +16,5 @@ converter = PdfConverter(
 rendered = converter(pdf_path)
 text, _, images = text_from_rendered(rendered)
 
-print(text)
+with open("test_marker.txt", "w") as f:
+    print(text, file=f)
