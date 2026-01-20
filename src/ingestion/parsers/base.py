@@ -1,7 +1,7 @@
 import os
 from abc import ABC, abstractmethod
 
-from shared.models import ParsedDoc
+from src.shared.models import ParsedDoc
 
 
 class BaseParser(ABC):
