@@ -222,3 +222,401 @@ page_end
 2026-01-21 13:07:42.114 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
 2026-01-21 13:07:42.114 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
 2026-01-21 13:07:42.114 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:47:36.717 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Introduction' (chars 0-69)
+2026-01-21 21:47:36.719 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Background' (chars 69-130)
+2026-01-21 21:47:36.719 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Methods' (chars 130-190)
+2026-01-21 21:47:36.719 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: 'Data Collection' (chars 190-250)
+2026-01-21 21:47:36.719 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: 'Analysis' (chars 250-290)
+2026-01-21 21:47:36.719 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: 'Results' (chars 290-346)
+2026-01-21 21:47:36.720 | WARNING  | src.ingestion.parsers.parsers:_extract_structure_from_markdown:141 - No markdown headers found, creating fallback chapter
+2026-01-21 21:47:36.721 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Single Header' (chars 0-42)
+2026-01-21 21:47:36.721 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Introduction' (chars 0-69)
+2026-01-21 21:47:36.721 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Background' (chars 69-130)
+2026-01-21 21:47:36.721 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Methods' (chars 130-190)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: 'Data Collection' (chars 190-250)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: 'Analysis' (chars 250-290)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: 'Results' (chars 290-346)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Introduction' (chars 0-69)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Background' (chars 69-130)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Methods' (chars 130-190)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: 'Data Collection' (chars 190-250)
+2026-01-21 21:47:36.722 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: 'Analysis' (chars 250-290)
+2026-01-21 21:47:36.723 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: 'Results' (chars 290-346)
+2026-01-21 21:47:36.723 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'H1' (chars 0-13)
+2026-01-21 21:47:36.723 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'H2' (chars 13-23)
+2026-01-21 21:47:36.724 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Only H2' (chars 0-20)
+2026-01-21 21:47:36.724 | WARNING  | src.ingestion.parsers.parsers:_extract_structure_from_markdown:141 - No markdown headers found, creating fallback chapter
+2026-01-21 21:47:36.725 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'First' (chars 0-8)
+2026-01-21 21:47:36.725 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Second' (chars 8-18)
+2026-01-21 21:47:36.725 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Third' (chars 18-29)
+2026-01-21 21:47:36.726 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Deep' (chars 0-8)
+2026-01-21 21:47:36.726 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Dive' (chars 8-16)
+2026-01-21 21:47:36.726 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Headers' (chars 16-26)
+2026-01-21 21:47:36.727 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /fake/path.pdf
+2026-01-21 21:47:36.727 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:47:36.727 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:47:36.727 | ERROR    | src.ingestion.parsers.parsers:parse:72 - Failed to parse /fake/path.pdf: Simulated conversion error
+2026-01-21 21:47:36.728 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /nonexistent/path/to/file.pdf
+2026-01-21 21:47:36.728 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:47:36.731 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:47:36.732 | ERROR    | src.ingestion.parsers.parsers:parse:72 - Failed to parse /nonexistent/path/to/file.pdf: [Errno 2] No such file or directory: '/nonexistent/path/to/file.pdf'
+2026-01-21 21:47:48.632 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:47:48.633 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:47:48.635 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:00.566 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:00.566 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:00.566 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:00.566 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:00.595 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:00.596 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:00.597 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:00.597 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:00.597 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:00.609 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:00.609 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:00.612 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:08.584 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:08.585 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:08.585 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:08.585 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:08.599 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:08.600 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:08.601 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:08.601 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:08.601 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:08.614 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:08.614 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:08.616 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:16.414 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:16.415 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:16.415 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:16.415 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:16.427 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:16.428 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:16.429 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:16.429 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:16.429 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:16.429 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:16.429 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:16.429 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:16.429 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:16.440 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:16.440 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:16.442 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:22.852 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:22.853 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:22.853 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:22.853 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:22.866 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:22.867 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:22.868 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:22.868 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:22.879 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:22.880 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:22.882 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:29.910 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:29.910 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:29.910 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:29.910 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:29.925 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:29.926 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:29.927 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:29.928 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:29.928 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:29.928 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:29.944 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:29.945 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:29.948 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:38.856 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:38.857 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:38.857 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:38.857 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:38.870 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:38.871 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:38.872 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:38.873 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:38.873 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:38.885 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:38.885 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:38.887 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:46.758 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:46.758 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:46.758 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:46.758 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:46.772 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:46.773 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:46.774 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:46.774 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:46.774 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:46.788 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:46.789 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:46.791 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:48:54.170 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:48:54.171 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:48:54.171 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:48:54.171 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:48:54.183 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:48:54.183 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:48:54.183 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:48:54.183 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:48:54.184 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:48:54.185 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:48:54.185 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:48:54.185 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:48:54.197 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:48:54.197 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:48:54.200 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:49:01.956 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:49:01.956 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:49:01.957 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:49:01.957 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:49:01.969 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:49:01.970 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:49:01.971 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:49:01.972 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:49:01.972 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:49:01.972 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:49:01.972 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-21 21:49:01.985 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: /home/moad/desktop/open-books/data/Word2Vec.pdf
+2026-01-21 21:49:01.985 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-21 21:49:01.988 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-21 21:49:12.429 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-21 21:49:12.429 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-21 21:49:12.430 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-21 21:49:12.430 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-21 21:49:12.444 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-21 21:49:12.445 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-21 21:49:12.446 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-21 21:49:12.446 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-21 21:49:12.446 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-21 21:49:12.446 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-21 21:49:12.446 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-21 21:49:12.446 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-21 21:49:12.446 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
