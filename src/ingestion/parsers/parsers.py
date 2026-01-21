@@ -58,7 +58,9 @@ class DoclingParser(BaseParser):
             text = text.replace(self.PAGE_BREAK, "")
 
             logger.debug("Extracting document structure...")
-            structure = self._extract_structure(doc)
+            structure = self._extract_structure_from_markdown(
+                text=text, page_map=page_map
+            )
             logger.info(f"Structure extracted: {len(structure.chapters)} chapters")
 
             logger.success(f"Successfully parsed {pdf_path.name}")
@@ -108,58 +110,121 @@ class DoclingParser(BaseParser):
     #     page_map[current_page] = (min_char, max_char)
     #     return page_map
 
-    def _extract_structure(self, doc: DoclingDocument) -> DocumentStructure:
+    def _find_page_for_char(
+        self, char_pos: int, page_map: dict[int, tuple[int, int]]
+    ) -> int:
+        for page_num, (start, end) in page_map.items():
+            if start <= char_pos < end:
+                return page_num
+        return max(page_map.keys())
+
+    def _extract_structure_from_markdown(
+        self, text: str, page_map: dict[int, tuple[int, int]]
+    ) -> DocumentStructure:
+        """Extract chapter structure by finding headers in the markdown text."""
+        import re
+
         chapters: list[Chapter] = []
-        current_chapter_num = 0
-        current_chapter_title = ""
-        current_chapter_start_page = 1
 
-        for item, level in doc.iterate_items():
-            label = getattr(item, "label", None)
-            text = getattr(item, "text", "").strip()
-            page_nbr = item.prov[0].page_no  # pyright: ignore[reportAttributeAccessIssue]
+        # Find all markdown headers (# or ## at start of line)
+        # Adjust the pattern based on what Docling actually outputs
+        header_pattern = r"^#{1,2}\s+(.+)$"
 
-            if not text:
-                continue
+        matches = []
+        for match in re.finditer(header_pattern, text, re.MULTILINE):
+            header_text = match.group(1).strip()
+            char_position = match.start()
+            matches.append((header_text, char_position))
 
-            page_start = current_chapter_start_page
-            page_end = max(current_chapter_start_page, page_nbr - 1)
-            if label == "section_header":
-                if current_chapter_num > 0:
-                    chapters.append(
-                        Chapter(
-                            number=current_chapter_num,
-                            title=current_chapter_title,
-                            page_range=(page_start, page_end),
-                        )
+        if not matches:
+            # Fallback: create single chapter for entire document
+            logger.warning("No markdown headers found, creating fallback chapter")
+            return DocumentStructure(
+                chapters=[
+                    Chapter(
+                        number=1,
+                        title="Full Document",
+                        page_range=(1, len(page_map)),
+                        char_span=(0, len(text)),
                     )
-                current_chapter_num += 1
-                current_chapter_title = text
-                current_chapter_start_page = page_nbr
-                logger.debug(
-                    f"Found chapter {current_chapter_num}: '{text}' (page {page_nbr})"
-                )
-
-        if current_chapter_num > 0:
-            page_start = current_chapter_start_page
-            page_end = len(doc.pages)
-            chapters.append(
-                Chapter(
-                    number=current_chapter_num,
-                    title=current_chapter_title,
-                    page_range=(page_start, page_end),
-                )
+                ]
             )
 
-        if not chapters:
-            logger.warning("No chapters detected, creating fallback chapter")
+        # Build chapters from the matches
+        for i, (title, char_start) in enumerate(matches, start=1):
+            # char_end is either the next header's start or end of document
+            char_end = matches[i][1] if i < len(matches) else len(text)
 
-            page_start = 1
-            page_end = len(doc.pages)
+            # Find which pages this character span covers
+            page_start = self._find_page_for_char(char_start, page_map)
+            page_end = self._find_page_for_char(char_end - 1, page_map)
+
             chapters.append(
                 Chapter(
-                    number=1, title="Full Document", page_range=(page_start, page_end)
+                    number=i,
+                    title=title,
+                    page_range=(page_start, page_end),
+                    char_span=(char_start, char_end),
                 )
+            )
+            logger.debug(
+                f"Found chapter {i}: '{title}' (chars {char_start}-{char_end})"
             )
 
         return DocumentStructure(chapters=chapters)
+
+    # def _extract_structure(self, doc: DoclingDocument) -> DocumentStructure:
+    #     chapters: list[Chapter] = []
+    #     current_chapter_num = 0
+    #     current_chapter_title = ""
+    #     current_chapter_start_page = 1
+    #
+    #     for item, level in doc.iterate_items():
+    #         label = getattr(item, "label", None)
+    #         text = getattr(item, "text", "").strip()
+    #         page_nbr = item.prov[0].page_no  # pyright: ignore[reportAttributeAccessIssue]
+    #
+    #         if not text:
+    #             continue
+    #
+    #         page_start = current_chapter_start_page
+    #         page_end = max(current_chapter_start_page, page_nbr - 1)
+    #         if label == "section_header":
+    #             if current_chapter_num > 0:
+    #                 chapters.append(
+    #                     Chapter(
+    #                         number=current_chapter_num,
+    #                         title=current_chapter_title,
+    #                         page_range=(page_start, page_end),
+    #                     )
+    #                 )
+    #             current_chapter_num += 1
+    #             current_chapter_title = text
+    #             current_chapter_start_page = page_nbr
+    #             logger.debug(
+    #                 f"Found chapter {current_chapter_num}: '{text}' (page {page_nbr})"
+    #             )
+    #
+    #     if current_chapter_num > 0:
+    #         page_start = current_chapter_start_page
+    #         page_end = len(doc.pages)
+    #         chapters.append(
+    #             Chapter(
+    #                 number=current_chapter_num,
+    #                 title=current_chapter_title,
+    #                 page_range=(page_start, page_end),
+    #             )
+    #         )
+    #
+    #     if not chapters:
+    #         logger.warning("No chapters detected, creating fallback chapter")
+    #
+    #         page_start = 1
+    #         page_end = len(doc.pages)
+    #         chapters.append(
+    #             Chapter(
+    #                 number=1, title="Full Document", page_range=(page_start, page_end)
+    #             )
+    #         )
+    #
+    #     return DocumentStructure(chapters=chapters)

@@ -2,7 +2,7 @@
 Test script for DoclingParser to verify:
 1. Metadata extraction
 2. Page map building
-3. Chapter structure extraction
+3. Chapter structure extraction with char_span
 4. Text export
 """
 
@@ -69,15 +69,18 @@ def test_parser():
         and result.structure.chapters[0].title == "Full Document"
     ):
         print("⚠️  WARNING: Only fallback chapter detected!")
-        print("   This means no section_header items were found.")
+        print("   This means no markdown headers were found.")
     else:
         print("\nChapters:")
         for ch in result.structure.chapters:
             page_start, page_end = ch.page_range
+            char_start, char_end = ch.char_span
             page_range_str = f"pages {page_start}-{page_end}"
             page_count = page_end - page_start + 1
+            char_count = char_end - char_start
             print(f"  {ch.number}. {ch.title}")
             print(f"     {page_range_str} ({page_count} pages)")
+            print(f"     chars {char_start:,}-{char_end:,} ({char_count:,} chars)")
 
     # ===== TEST 4: TEXT EXPORT =====
     print("\n" + "=" * 60)
@@ -108,17 +111,79 @@ def test_parser():
     print("✅ CHAPTER VALIDATION")
     print("=" * 60)
 
-    # Check if chapters have valid page ranges
+    # Check if chapters have valid page ranges and char spans
     all_valid = True
     for ch in result.structure.chapters:
         page_start, page_end = ch.page_range
-        is_valid = page_start <= page_end <= result.metadata.nbr_pages
+        char_start, char_end = ch.char_span
+
+        page_valid = page_start <= page_end <= result.metadata.nbr_pages
+        char_valid = 0 <= char_start < char_end <= len(result.text)
+        is_valid = page_valid and char_valid
+
         status = "✅" if is_valid else "❌"
-        print(f"{status} Chapter {ch.number}: pages {page_start}-{page_end}")
+        print(
+            f"{status} Chapter {ch.number}: pages {page_start}-{page_end}, chars {char_start:,}-{char_end:,}"
+        )
         if not is_valid:
             all_valid = False
+            if not page_valid:
+                print("   ⚠️  Invalid page range")
+            if not char_valid:
+                print("   ⚠️  Invalid char span")
 
     print(f"\nAll chapters valid: {'✅ YES' if all_valid else '❌ NO'}")
+
+    # ===== TEST 7: CHAR_SPAN CONSISTENCY =====
+    print("\n" + "=" * 60)
+    print("🔍 CHAR_SPAN CONSISTENCY CHECK")
+    print("=" * 60)
+
+    # Verify char_spans are contiguous and cover the whole document
+    sorted_chapters = sorted(result.structure.chapters, key=lambda x: x.char_span[0])
+
+    print("Checking if chapters are contiguous...")
+    for i in range(len(sorted_chapters) - 1):
+        current_end = sorted_chapters[i].char_span[1]
+        next_start = sorted_chapters[i + 1].char_span[0]
+        gap = next_start - current_end
+
+        if gap == 0:
+            print(
+                f"✅ Chapter {sorted_chapters[i].number} → {sorted_chapters[i + 1].number}: contiguous"
+            )
+        else:
+            print(
+                f"⚠️  Chapter {sorted_chapters[i].number} → {sorted_chapters[i + 1].number}: gap of {gap} chars"
+            )
+
+    # Check coverage
+    first_char = sorted_chapters[0].char_span[0]
+    last_char = sorted_chapters[-1].char_span[1]
+    print("\nDocument coverage:")
+    print(f"  First chapter starts at: {first_char:,}")
+    print(f"  Last chapter ends at: {last_char:,}")
+    print(f"  Document length: {len(result.text):,}")
+    print(
+        f"  Coverage: {'✅ Complete' if first_char == 0 and last_char == len(result.text) else '⚠️  Incomplete'}"
+    )
+
+    # ===== TEST 8: EXTRACT CHAPTERS USING CHAR_SPAN =====
+    print("\n" + "=" * 60)
+    print("📚 CHAPTER EXTRACTION USING CHAR_SPAN")
+    print("=" * 60)
+
+    for ch in result.structure.chapters[:3]:  # First 3 chapters
+        char_start, char_end = ch.char_span
+        chapter_text = result.text[char_start:char_end]
+
+        print(f"\nChapter {ch.number}: {ch.title}")
+        print(f"  Char span: {char_start:,}-{char_end:,}")
+        print(f"  Length: {len(chapter_text):,} chars")
+        print("  Preview (first 200 chars):")
+        print("  " + "-" * 58)
+        print("  " + chapter_text[:200].replace("\n", "\n  "))
+        print("  " + "-" * 58)
 
     # ===== SUMMARY =====
     print("\n" + "=" * 60)
@@ -134,18 +199,18 @@ def test_parser():
     output_dir = Path("test_output")
     output_dir.mkdir(exist_ok=True)
 
-    # Save first chapter text
+    # Save first chapter text using char_span
     if result.structure.chapters:
         ch1 = result.structure.chapters[0]
-        page_start, page_end = ch1.page_range
-        start_char, _ = result.page_map[page_start]
-        _, end_char = result.page_map[page_end]
-        ch1_text = result.text[start_char:end_char]
+        char_start, char_end = ch1.char_span
+        ch1_text = result.text[char_start:char_end]
 
         output_file = output_dir / "chapter_1.md"
         with open(output_file, "w", encoding="utf-8") as f:
             f.write(f"# {ch1.title}\n\n")
-            f.write(f"Pages: {page_start}-{page_end}\n\n")
+            page_start, page_end = ch1.page_range
+            f.write(f"Pages: {page_start}-{page_end}\n")
+            f.write(f"Characters: {char_start:,}-{char_end:,}\n\n")
             f.write(ch1_text)
         print(f"\n💾 Saved Chapter 1 to: {output_file}")
 

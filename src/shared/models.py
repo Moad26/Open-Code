@@ -20,13 +20,14 @@ class Chapter(BaseModel):
     number: int = Field(ge=1)
     title: str
     page_range: Tuple[int, int] = Field(description="Start and end page numbers")
+    char_span: Tuple[int, int] = Field(description="da span of char")
 
-    @field_validator("page_range")
+    @field_validator("page_range", "char_span")
     @classmethod
     def validate_page_range(cls, value: Tuple[int, int]) -> Tuple[int, int]:
         page_start, page_end = value
         if page_end < page_start:
-            raise ValueError("page_end must be >= page_start")
+            raise ValueError("it's ironic u see")
         return value
 
 
