@@ -10,8 +10,8 @@ ROOT_Path = Path(os.getenv("PROJECT_ROOT", Path(__file__).resolve().parent.paren
 
 
 class ParsingConfig(BaseModel):
-    parser: Literal["pymupdf", "docling"] = Field(
-        default="pymupdf", description="PDF parser to use"
+    parser: Literal["marker", "docling"] = Field(
+        default="docling", description="PDF parser to use"
     )
     extract_images: bool = Field(
         default=True, description="Extract and store diagrams/figures"
@@ -23,15 +23,15 @@ class ParsingConfig(BaseModel):
         default=False, description="Use OCR for scanned PDFs (slow)"
     )
 
-    # Font-based structure detection (for PyMuPDF)
-    heading_font_threshold: float = Field(
-        default=1.2,
-        description="Font size multiplier to detect headings (e.g., 1.2x normal = heading)",
-    )
-    code_block_fonts: list[str] = Field(
-        default=["Courier", "Consolas", "Monaco", "Monospace"],
-        description="Font families that indicate code blocks",
-    )
+    # # Font-based structure detection (for PyMuPDF)
+    # heading_font_threshold: float = Field(
+    #     default=1.2,
+    #     description="Font size multiplier to detect headings (e.g., 1.2x normal = heading)",
+    # )
+    # code_block_fonts: list[str] = Field(
+    #     default=["Courier", "Consolas", "Monaco", "Monospace"],
+    #     description="Font families that indicate code blocks",
+    # )
 
 
 class ChunkingConfig(BaseModel):

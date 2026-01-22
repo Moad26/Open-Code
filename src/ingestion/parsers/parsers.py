@@ -228,3 +228,8 @@ class DoclingParser(BaseParser):
     #         )
     #
     #     return DocumentStructure(chapters=chapters)
+
+
+class MarkerParser(BaseParser):
+    def parse(self, pdf_path: os.PathLike) -> ParsedDoc:
+        return super().parse(pdf_path)
