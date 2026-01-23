@@ -45,8 +45,8 @@ class ParsingConfig(BaseModel):
 
 
 class ChunkingConfig(BaseModel):
-    strategy: Literal["semantic", "fixed", "hybrid"] = Field(
-        default="semantic", description="Chunking strategy"
+    strategy: Literal["markdown_based", "semantic"] = Field(
+        default="markdown_based", description="Chunking strategy"
     )
     chunk_size: int = Field(
         default=512, description="Target chunk size in tokens (for fixed/hybrid)"

@@ -64,3 +64,9 @@ class MarkdownChunker(BaseChunker):
                 chunk_list.append(Chunk(content=content, metadata=metadata))
 
         return chunk_list
+
+
+class SemanticChunker(BaseChunker):
+    def chunk(self, doc: ParsedDoc) -> List[Chunk]:
+        chunks: List[Chunk] = []
+        return chunks
