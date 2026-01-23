@@ -12,3 +12,12 @@ chunking:
   max_chunk_size: 1024
   preserve_code_blocks: true
   preserve_equations: true
+logging:
+  log_dir: !!python/object/apply:pathlib.PosixPath
+  - /
+  - home
+  - moad
+  - desktop
+  - open-books
+  - logs
+  level: INFO

@@ -24,7 +24,7 @@ class MarkdownChunker(BaseChunker):
             end = start + self.chunk_size
             chunk_text = content[start:end]
             char_start = chapter.char_span[0] + start
-            char_end = chapter.char_span[1] + min(end, content_length)
+            char_end = chapter.char_span[0] + min(end, content_length)
             metadata = ChunkMetadata(
                 source_doc_title=source_title,
                 chapter_name=chapter.title,
@@ -33,6 +33,10 @@ class MarkdownChunker(BaseChunker):
                 chunk_id=uuid4(),
             )
             chunks.append(Chunk(content=chunk_text, metadata=metadata))
+
+            if end >= content_length:
+                break
+
             start += self.chunk_size - self.chunk_overlap
         return chunks
 

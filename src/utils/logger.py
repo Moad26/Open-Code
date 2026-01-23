@@ -3,9 +3,12 @@ from functools import lru_cache
 
 from loguru import logger
 
+from src.utils.config import settings
+
 
 @lru_cache()
 def setup_logger():
+    logging_dir = settings.logging.log_dir
     logger.remove()
     logger.add(
         sys.stderr,
@@ -14,14 +17,14 @@ def setup_logger():
     )
 
     logger.add(
-        "logs/app.log",
+        logging_dir / "app.log",
         rotation="500 MB",
         retention="10 days",
         level="DEBUG",
     )
 
     logger.add(
-        "logs/app.json",
+        logging_dir / "app.json",
         rotation="500 MB",
         retention="10 days",
         level="DEBUG",

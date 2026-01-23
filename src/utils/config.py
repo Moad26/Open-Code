@@ -6,7 +6,17 @@ from typing import Literal, Optional
 import yaml
 from pydantic import BaseModel, Field
 
-ROOT_Path = Path(os.getenv("PROJECT_ROOT", Path(__file__).resolve().parent.parent))
+ROOT_Path = Path(
+    os.getenv("PROJECT_ROOT", Path(__file__).resolve().parent.parent.parent)
+)
+
+
+class LoggingConfig(BaseModel):
+    log_dir: Path = Field(default=ROOT_Path / "logs")
+    # level: str = "INFO"
+
+    def setup(self):
+        self.log_dir.mkdir(parents=True, exist_ok=True)
 
 
 class ParsingConfig(BaseModel):
@@ -63,10 +73,11 @@ class ChunkingConfig(BaseModel):
 class ConfigModel(BaseModel):
     parsing: ParsingConfig = Field(default_factory=ParsingConfig)
     chunking: ChunkingConfig = Field(default_factory=ChunkingConfig)
+    logging: LoggingConfig = Field(default_factory=LoggingConfig)
 
 
 class Config:
-    def __init__(self, config_file: os.PathLike = ROOT_Path / "config.yaml"):
+    def __init__(self, config_file: os.PathLike = ROOT_Path / "config" / "config.yaml"):
         self._file = Path(config_file)
         self._config: Optional[ConfigModel] = None
 
