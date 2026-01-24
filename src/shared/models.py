@@ -57,3 +57,10 @@ class ChunkMetadata(BaseModel):
 class Chunk(BaseModel):
     content: str = Field(description="same same but differeeent")
     metadata: ChunkMetadata = Field(description="but still same")
+
+
+class EmbeddedChunk(Chunk):
+    embedding: list[float] = Field(
+        description="the embedding of the content of the chunk"
+    )
+    vector_id: UUID = Field(description="it's understadable ig")

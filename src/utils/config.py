@@ -11,6 +11,25 @@ ROOT_Path = Path(
 )
 
 
+class EmbeddingConfig(BaseModel):
+    provider: Literal["sentence_transformers"] = Field(
+        default="sentence_transformers",
+        description="the basis to build our embedder on",
+    )
+    model_name: str = Field(
+        default="BAAI/bge-m3",
+        description="The specific model to load from Hugging Face",
+    )
+    dimensions: int = Field(
+        default=1024,
+        description="Must match the model's output (e.g., 384 for MiniLM, 1024 for BGE-M3)",
+    )
+    device: Literal["cpu", "cuda", "mps"] = Field(
+        default="cpu", description="Hardware to run the model on"
+    )
+    batch_size: int = Field(default=32)
+
+
 class LoggingConfig(BaseModel):
     log_dir: Path = Field(default=ROOT_Path / "logs")
     # level: str = "INFO"
@@ -71,9 +90,10 @@ class ChunkingConfig(BaseModel):
 
 
 class ConfigModel(BaseModel):
+    logging: LoggingConfig = Field(default_factory=LoggingConfig)
     parsing: ParsingConfig = Field(default_factory=ParsingConfig)
     chunking: ChunkingConfig = Field(default_factory=ChunkingConfig)
-    logging: LoggingConfig = Field(default_factory=LoggingConfig)
+    embedding: EmbeddingConfig = Field(default_factory=EmbeddingConfig)
 
 
 class Config:
