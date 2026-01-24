@@ -1260,3 +1260,44 @@
 2026-01-23 17:20:34.586 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
 2026-01-23 17:20:34.587 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
 2026-01-23 17:20:34.587 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-24 17:21:26.146 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/1
+2026-01-24 17:21:26.146 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 1 chunks
+2026-01-24 17:21:26.148 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-model
+2026-01-24 17:21:26.149 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-24 17:21:26.149 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='133484836517136'>
+2026-01-24 17:23:04.720 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/3
+2026-01-24 17:23:04.721 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 2/3
+2026-01-24 17:23:04.721 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 3/3
+2026-01-24 17:23:04.721 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 5 chunks
+2026-01-24 17:23:04.722 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/1
+2026-01-24 17:23:04.722 | WARNING  | src.ingestion.embedding.base_embed:embed_chunk:43 - Skipping 1 empty chunks
+2026-01-24 17:23:04.722 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 0 chunks
+2026-01-24 17:23:04.724 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-model
+2026-01-24 17:23:04.725 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-24 17:23:04.726 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='137278030143376'>
+2026-01-24 17:24:31.948 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/3
+2026-01-24 17:24:31.949 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 2/3
+2026-01-24 17:24:31.949 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 3/3
+2026-01-24 17:24:31.950 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 5 chunks
+2026-01-24 17:24:31.952 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-model
+2026-01-24 17:24:31.954 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-24 17:24:31.955 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='134720229350480'>
+2026-01-24 17:24:55.791 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: paraphrase-albert-small-v2
+2026-01-24 17:26:02.688 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 768d on cpu
+2026-01-24 17:26:02.689 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/1
+2026-01-24 17:26:02.767 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 1 chunks
+2026-01-24 17:26:02.769 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-factory-model
+2026-01-24 17:26:02.769 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='137869617493648'>
+2026-01-24 17:26:37.543 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: paraphrase-albert-small-v2
+2026-01-24 17:26:45.504 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 768d on cpu
+2026-01-24 17:26:45.504 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/1
+2026-01-24 17:26:45.524 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 1 chunks
+2026-01-24 17:26:45.526 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-factory-model
+2026-01-24 17:26:45.526 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='137641790237776'>
+2026-01-24 17:26:45.528 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/3
+2026-01-24 17:26:45.528 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 2/3
+2026-01-24 17:26:45.528 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 3/3
+2026-01-24 17:26:45.528 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 5 chunks
+2026-01-24 17:26:45.530 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: test-model
+2026-01-24 17:26:45.532 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-24 17:26:45.532 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on <MagicMock name='SentenceTransformer().device' id='137648111830416'>

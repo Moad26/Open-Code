@@ -1,0 +1,28 @@
+logging:
+  log_dir: !!python/object/apply:pathlib.PosixPath
+  - /
+  - home
+  - moad
+  - desktop
+  - open-books
+  - logs
+parsing:
+  parser: docling
+  extract_images: true
+  extract_tables: true
+  ocr_enabled: false
+chunking:
+  strategy: markdown_based
+  chunk_size: 512
+  chunk_overlap: 50
+  respect_boundaries: true
+  min_chunk_size: 100
+  max_chunk_size: 1024
+  preserve_code_blocks: true
+  preserve_equations: true
+embedding:
+  provider: sentence_transformers
+  model_name: BAAI/bge-m3
+  dimensions: 1024
+  device: cpu
+  batch_size: 32

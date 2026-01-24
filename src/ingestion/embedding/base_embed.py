@@ -11,7 +11,7 @@ class TemplateEmbedder(ABC):
         self.batch_size = batch_size
 
     def _preprocess(self, text: str) -> str:
-        text.strip()
+        text = text.strip()
         text = re.sub(r"\s+", " ", text)
         return text
 
@@ -35,7 +35,7 @@ class TemplateEmbedder(ABC):
                 logger.debug(
                     f"Embedding batch {i // self.batch_size + 1}/{(len(chunks) - 1) // self.batch_size + 1}"
                 )
-                processed_texts = [self._preprocess(c.content) for c in chunks]
+                processed_texts = [self._preprocess(c.content) for c in batch]
                 valid_indices = [
                     idx for idx, text in enumerate(processed_texts) if text
                 ]
