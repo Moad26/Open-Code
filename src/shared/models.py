@@ -1,7 +1,7 @@
-from typing import Tuple
+from typing import Tuple, Union
 from uuid import UUID
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_serializer, field_validator
 
 
 class MetaData(BaseModel):
@@ -22,6 +22,14 @@ class Chapter(BaseModel):
     page_range: Tuple[int, int] = Field(description="Start and end page numbers")
     char_span: Tuple[int, int] = Field(description="da span of char")
 
+    @field_validator("page_range", "char_span", mode="before")
+    @classmethod
+    def deserialize_tuple(cls, value: Union[Tuple[int, int], str]) -> Tuple[int, int]:
+        if isinstance(value, str):
+            start, end = value.split("-")
+            return (int(start), int(end))
+        return value
+
     @field_validator("page_range", "char_span")
     @classmethod
     def validate_page_range(cls, value: Tuple[int, int]) -> Tuple[int, int]:
@@ -29,6 +37,10 @@ class Chapter(BaseModel):
         if page_end < page_start:
             raise ValueError("it's ironic u see")
         return value
+
+    @field_serializer("page_range", "char_span")
+    def serialize_tuple(self, value: Tuple[int, int]) -> str:
+        return f"{value[0]}-{value[1]}"
 
 
 class DocumentStructure(BaseModel):
@@ -45,6 +57,10 @@ class ParsedDoc(BaseModel):
         description="Maps page number to (start_char, end_char)", min_length=1
     )
 
+    @field_serializer("page_map")
+    def serialize_page_map(self, value: dict[int, tuple[int, int]]) -> dict[int, str]:
+        return {page: f"{span[0]}-{span[1]}" for page, span in value.items()}
+
 
 class ChunkMetadata(BaseModel):
     source_doc_title: str = Field(description="The source document title")
@@ -52,6 +68,18 @@ class ChunkMetadata(BaseModel):
     page_range: Tuple[int, int] = Field(description="Start and end page numbers")
     char_span: Tuple[int, int] = Field(description="span of charactres ig")
     chunk_id: UUID = Field(description="its understadable ig")
+
+    @field_validator("page_range", "char_span", mode="before")
+    @classmethod
+    def deserialize_tuple(cls, value: Union[Tuple[int, int], str]) -> Tuple[int, int]:
+        if isinstance(value, str):
+            start, end = value.split("-")
+            return (int(start), int(end))
+        return value
+
+    @field_serializer("page_range", "char_span")
+    def serialize_tuple(self, value: Tuple[int, int]) -> str:
+        return f"{value[0]}-{value[1]}"
 
 
 class Chunk(BaseModel):
@@ -64,3 +92,4 @@ class EmbeddedChunk(Chunk):
         description="the embedding of the content of the chunk"
     )
     vector_id: UUID = Field(description="it's understadable ig")
+

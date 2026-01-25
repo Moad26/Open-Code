@@ -17,11 +17,11 @@ class EmbeddingConfig(BaseModel):
         description="the basis to build our embedder on",
     )
     model_name: str = Field(
-        default="BAAI/bge-m3",
+        default="all-MiniLM-L6-v2",
         description="The specific model to load from Hugging Face",
     )
     dimensions: int = Field(
-        default=1024,
+        default=384,
         description="Must match the model's output (e.g., 384 for MiniLM, 1024 for BGE-M3)",
     )
     device: Literal["cpu", "cuda", "mps"] = Field(
