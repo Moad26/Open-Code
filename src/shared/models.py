@@ -93,3 +93,11 @@ class EmbeddedChunk(Chunk):
     )
     vector_id: UUID = Field(description="it's understadable ig")
 
+
+class SearchResult(Chunk):
+    score: float = Field(description="Similarity score (closer to 0 is better for L2)")
+
+
+class CachedPromptResponse(BaseModel):
+    prompt: str = Field(description="da prompt")
+    response: str = Field(description="da resp")

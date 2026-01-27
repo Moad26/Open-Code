@@ -89,11 +89,24 @@ class ChunkingConfig(BaseModel):
     )
 
 
+class VectorStoreConfig(BaseModel):
+    client_path: Path = Field(default=ROOT_Path / "data" / "chroma_db")
+    collection_name: str = Field(default="technical_books")
+
+
+class RedisConfig(BaseModel):
+    host: str = Field(default="localhost")
+    port: int = Field(default=6379)
+    cache_threshold: float = Field(default=0.1)
+
+
 class ConfigModel(BaseModel):
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
     parsing: ParsingConfig = Field(default_factory=ParsingConfig)
     chunking: ChunkingConfig = Field(default_factory=ChunkingConfig)
     embedding: EmbeddingConfig = Field(default_factory=EmbeddingConfig)
+    vector_store: VectorStoreConfig = Field(default_factory=VectorStoreConfig)
+    redis: RedisConfig = Field(default_factory=RedisConfig)
 
 
 class Config:
