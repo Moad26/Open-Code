@@ -1705,3 +1705,151 @@ metadata.char_span
 2026-01-27 13:55:10.057 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/2
 2026-01-27 13:55:10.593 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 2/2
 2026-01-27 13:55:10.611 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 33 chunks
+2026-01-29 16:01:23.792 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 16:01:23.801 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 16:01:23.802 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 16:01:28.985 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 16:02:42.283 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 16:02:42.287 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 16:02:42.289 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 16:02:47.658 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:39:43.012 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:39:43.016 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:39:43.017 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:39:51.485 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:39:51.626 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:39:51.636 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:40:31.918 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:40:31.920 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:40:31.921 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:40:39.584 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:40:39.622 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:40:39.625 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:40:41.920 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:40:41.922 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:40:41.923 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:40:48.562 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:40:48.592 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:40:48.595 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:40:53.234 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:40:53.236 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:40:53.236 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:41:00.375 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:41:00.411 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:41:00.414 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:43:12.576 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:43:12.579 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:43:12.581 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:43:20.024 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:43:20.042 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:43:20.048 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:46:20.863 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:46:20.865 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:46:20.866 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:46:26.661 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:46:26.701 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:46:26.706 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:47:00.498 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:47:00.501 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:48:08.325 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:48:08.327 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:48:08.328 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:48:13.334 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:48:13.384 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:48:13.388 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:48:37.519 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:48:37.520 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:48:37.521 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:48:44.613 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:48:44.658 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:48:44.662 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:49:19.693 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:49:19.695 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:49:19.696 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:49:23.348 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:49:23.401 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:49:23.403 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:49:50.275 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:49:50.276 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:49:50.277 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:49:57.648 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:50:36.358 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:50:36.360 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:50:36.361 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:50:43.995 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:50:47.240 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:50:47.246 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:52:06.612 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:52:06.614 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:52:06.615 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:52:11.268 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:52:12.344 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 22:52:12.347 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 22:59:20.848 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 22:59:20.850 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 22:59:20.851 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 22:59:27.765 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 22:59:29.743 | INFO     | src.ingestion.vector_store.stores:query_flattened:87 - querying the results
+2026-01-29 22:59:29.748 | INFO     | src.ingestion.vector_store.stores:query_flattened:111 - finished the querying
+2026-01-29 23:17:40.824 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 23:17:40.827 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 23:17:40.828 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 23:17:44.718 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 23:17:44.776 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 23:17:44.783 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 23:18:07.568 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 23:18:07.569 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 23:18:07.570 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 23:18:14.651 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 23:18:14.698 | INFO     | src.ingestion.vector_store.stores:query_flattened:87 - querying the results
+2026-01-29 23:18:14.701 | INFO     | src.ingestion.vector_store.stores:query_flattened:111 - finished the querying
+2026-01-29 23:18:18.069 | INFO     | src.ingestion.vector_store.stores:query:47 - quering the results
+2026-01-29 23:18:18.072 | INFO     | src.ingestion.vector_store.stores:query:73 - finished the quering
+2026-01-29 23:21:09.602 | INFO     | src.ingestion.parsers.parsers:parse:22 - Starting to parse PDF: ../../data/Word2Vec.pdf
+2026-01-29 23:21:09.604 | DEBUG    | src.ingestion.parsers.parsers:parse:32 - Initializing DocumentConverter with pipeline options
+2026-01-29 23:21:09.606 | DEBUG    | src.ingestion.parsers.parsers:parse:39 - Converting document...
+2026-01-29 23:21:19.338 | INFO     | src.ingestion.parsers.parsers:parse:42 - Document converted successfully: 12 pages
+2026-01-29 23:21:19.339 | DEBUG    | src.ingestion.parsers.parsers:parse:44 - Extracting metadata...
+2026-01-29 23:21:19.340 | DEBUG    | src.ingestion.parsers.parsers:parse:46 - Metadata extracted: title='Word2Vec', pages=12
+2026-01-29 23:21:19.340 | DEBUG    | src.ingestion.parsers.parsers:parse:50 - Exporting to markdown...
+2026-01-29 23:21:19.369 | DEBUG    | src.ingestion.parsers.parsers:parse:52 - Markdown exported: 45808 characters
+2026-01-29 23:21:19.369 | DEBUG    | src.ingestion.parsers.parsers:parse:54 - Building page map...
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:parse:56 - Page map built: 12 pages
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:parse:60 - Extracting document structure...
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 1: 'Efficient Estimation of Word Representations in Vector Space' (chars 0-65)
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 2: 'Tomas Mikolov' (chars 65-323)
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 3: 'Abstract' (chars 323-981)
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 4: '1 Introduction' (chars 981-2477)
+2026-01-29 23:21:19.370 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 5: '1.1 Goals of the Paper' (chars 2477-4299)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 6: '1.2 Previous Work' (chars 4299-5776)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 7: '2 Model Architectures' (chars 5776-7204)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 8: '2.1 Feedforward Neural Net Language Model (NNLM)' (chars 7204-9732)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 9: '2.2 Recurrent Neural Net Language Model (RNNLM)' (chars 9732-10900)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 10: '2.3 Parallel Training of Neural Networks' (chars 10900-11631)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 11: '3 New Log-linear Models' (chars 11631-12740)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 12: '3.1 Continuous Bag-of-Words Model' (chars 12740-13878)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 13: '3.2 Continuous Skip-gram Model' (chars 13878-15383)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 14: '4 Results' (chars 15383-19026)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 15: '4.1 Task Description' (chars 19026-20546)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 16: '4.2 Maximization of Accuracy' (chars 20546-24316)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 17: '4.3 Comparison of Model Architectures' (chars 24316-30537)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 18: '4.4 Large Scale Parallel Training of Models' (chars 30537-32859)
+2026-01-29 23:21:19.371 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 19: '4.5 Microsoft Research Sentence Completion Challenge' (chars 32859-34416)
+2026-01-29 23:21:19.372 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 20: '5 Examples of the Learned Relationships' (chars 34416-37870)
+2026-01-29 23:21:19.372 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 21: '6 Conclusion' (chars 37870-39911)
+2026-01-29 23:21:19.372 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 22: '7 Follow-Up Work' (chars 39911-40512)
+2026-01-29 23:21:19.372 | DEBUG    | src.ingestion.parsers.parsers:_extract_structure_from_markdown:170 - Found chapter 23: 'References' (chars 40512-45599)
+2026-01-29 23:21:19.372 | INFO     | src.ingestion.parsers.parsers:parse:64 - Structure extracted: 23 chapters
+2026-01-29 23:21:19.373 | SUCCESS  | src.ingestion.parsers.parsers:parse:66 - Successfully parsed Word2Vec.pdf
+2026-01-29 23:22:12.936 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 23:22:19.871 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 23:22:21.995 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 1/2
+2026-01-29 23:22:22.503 | DEBUG    | src.ingestion.embedding.base_embed:embed_chunk:35 - Embedding batch 2/2
+2026-01-29 23:22:22.522 | INFO     | src.ingestion.embedding.base_embed:embed_chunk:62 - Successfully embedded 33 chunks
+2026-01-29 23:22:36.664 | INFO     | src.ingestion.vector_store.stores:__init__:19 - creating or getting the collection
+2026-01-29 23:22:36.666 | INFO     | src.ingestion.vector_store.stores:__init__:25 - getting the embedder
+2026-01-29 23:22:36.667 | INFO     | src.ingestion.embedding.embedder:__init__:19 - Loading SentenceTransformer model: all-MiniLM-L6-v2
+2026-01-29 23:22:44.675 | INFO     | src.ingestion.embedding.embedder:__init__:27 - Model loaded: 384d on cpu
+2026-01-29 23:22:44.676 | INFO     | src.ingestion.vector_store.stores:ingest:37 - adding chunks to the collection
+2026-01-29 23:22:52.236 | INFO     | src.ingestion.vector_store.stores:query_flattened:87 - querying the results
+2026-01-29 23:22:52.243 | INFO     | src.ingestion.vector_store.stores:query_flattened:111 - finished the querying

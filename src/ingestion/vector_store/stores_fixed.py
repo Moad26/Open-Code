@@ -1,11 +1,11 @@
 from typing import List, Optional, cast
 
 import chromadb
-from chromadb.api.types import Embedding, Metadata, SearchResult
+from chromadb.api.types import Embedding, Metadata
 from redisvl.extensions.cache.llm import SemanticCache
 
 from src.ingestion.embedding.get_embbedder import get_embedder
-from src.shared.models import CachedPromptResponse, ChunkMetadata, EmbeddedChunk
+from src.shared.models import CachedPromptResponse, ChunkMetadata, EmbeddedChunk, SearchResult  # Fixed: Added SearchResult here
 from src.utils.config import RedisConfig, VectorStoreConfig
 from src.utils.logger import logger
 
@@ -39,47 +39,8 @@ class ChromaStore:
             ids=ids, embeddings=embeddings, documents=documents, metadatas=metadatas
         )
 
-    def query(self, sentences: List[str], n_result: int) -> List[List[SearchResult]]:
-        query_embedding = cast(
-            List[Embedding],
-            self.embedder._embed_batch(sentences),
-        )
-        logger.info("quering the results")
-        results = self.collection.query(
-            query_embeddings=query_embedding, n_results=n_result
-        )
-        chunks_output: List[List[SearchResult]] = []
-
-        for i in range(len(results["ids"])):
-            query_results: List[SearchResult] = []
-            assert results["documents"] is not None
-            assert results["metadatas"] is not None
-            assert results["distances"] is not None
-
-            current_docs = results["documents"][i]
-            current_metas = results["metadatas"][i]
-            current_dists = results["distances"][i]
-
-            for doc_text, meta_json, score in zip(
-                current_docs, current_metas, current_dists
-            ):
-                metadata = ChunkMetadata.model_validate(meta_json)
-
-                query_results.append(
-                    SearchResult(content=doc_text, metadata=metadata, score=score)
-                )
-
-            chunks_output.append(query_results)
-        logger.info("finished the quering")
-        return chunks_output
-
-    def count(self) -> int:
-        return self.collection.count()
-
-    def query_flattened(
-        self, sentences: List[str], n_result: int
-    ) -> List[SearchResult]:
-        """Modified version that returns flat list"""
+    def query(self, sentences: List[str], n_result: int) -> List[SearchResult]:
+        """Returns flat list of SearchResult objects (FIXED VERSION)"""
         query_embedding = cast(
             List[Embedding],
             self.embedder._embed_batch(sentences),
@@ -109,7 +70,10 @@ class ChromaStore:
                 )
 
         logger.info("finished the querying")
-        return all_chunks  # Flat list!
+        return all_chunks  # Returns flat list!
+
+    def count(self) -> int:
+        return self.collection.count()
 
 
 class RedisCache:

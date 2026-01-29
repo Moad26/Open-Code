@@ -100,6 +100,14 @@ class RedisConfig(BaseModel):
     cache_threshold: float = Field(default=0.1)
 
 
+class LLMConfig(BaseModel):
+    provider: Literal["ollama", "openai"] = Field(default="ollama")
+    model_name: str = Field(default="llama3.2")
+    api_key: Optional[str] = Field(default=None)
+    base_url: Optional[str] = Field(default=None)
+    temperature: float = Field(default=0.1, ge=0, le=1)
+
+
 class ConfigModel(BaseModel):
     logging: LoggingConfig = Field(default_factory=LoggingConfig)
     parsing: ParsingConfig = Field(default_factory=ParsingConfig)
@@ -107,6 +115,7 @@ class ConfigModel(BaseModel):
     embedding: EmbeddingConfig = Field(default_factory=EmbeddingConfig)
     vector_store: VectorStoreConfig = Field(default_factory=VectorStoreConfig)
     redis: RedisConfig = Field(default_factory=RedisConfig)
+    llm: LLMConfig = Field(default_factory=LLMConfig)
 
 
 class Config:
