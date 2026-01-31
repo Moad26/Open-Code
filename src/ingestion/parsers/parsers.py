@@ -51,6 +51,9 @@ class DoclingParser(BaseParser):
             text = doc.export_to_markdown(page_break_placeholder=self.PAGE_BREAK)
             logger.debug(f"Markdown exported: {len(text)} characters")
 
+            logger.debug("Removing duplicate references...")
+            text = self._deduplicate_references(text)
+
             logger.debug("Building page map...")
             page_map = self._build_page_map(text)
             logger.debug(f"Page map built: {len(page_map)} pages")
@@ -90,7 +93,24 @@ class DoclingParser(BaseParser):
             current_pos += page_len
 
         return page_map
-
+    def _deduplicate_references(self, text: str) -> str:
+        """Remove duplicate reference sections, keeping only the first occurrence"""
+        import re
+        
+        ref_pattern = r'(?:^|\n)((?:References?|Bibliography|REFERENCES?|BIBLIOGRAPHY)\s*\n(?:[-\[\d].*?\n?)+)'
+        
+        matches = list(re.finditer(ref_pattern, text, re.MULTILINE | re.IGNORECASE))
+        
+        if len(matches) <= 1:
+            return text
+        
+        # Keep only the first reference section, remove all others
+        result = text
+        for match in reversed(matches[1:]):  # Process in reverse to maintain positions
+            result = result[:match.start()] + result[match.end():]
+        
+        logger.debug(f"Removed {len(matches) - 1} duplicate reference section(s)")
+        return result
     # def _build_page_map(self, doc: DoclingDocument) -> dict[int, tuple[int, int]]:
     #     page_map: dict[int, tuple[int, int]] = {}
     #     min_char, max_char = 0, 0

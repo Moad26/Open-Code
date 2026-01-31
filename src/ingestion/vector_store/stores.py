@@ -1,12 +1,17 @@
-from typing import List, Optional, cast
+from typing import List, Optional, Tuple, cast
 
 import chromadb
 from chromadb.api.types import Embedding, Metadata
 from redisvl.extensions.cache.llm import SemanticCache
 
 from src.ingestion.embedding.get_embbedder import get_embedder
-from src.shared.models import CachedPromptResponse, ChunkMetadata, EmbeddedChunk, SearchResult
-from src.utils.config import RedisConfig, VectorStoreConfig
+from src.shared.models import (
+    CachedPromptResponse,
+    ChunkMetadata,
+    EmbeddedChunk,
+    SearchResult,
+)
+from src.utils.config import RedisConfig, VectorStoreConfig, settings
 from src.utils.logger import logger
 
 
@@ -42,7 +47,7 @@ class ChromaStore:
     def query(self, sentences: List[str], n_result: int) -> List[SearchResult]:
         """
         Returns flat list of SearchResult objects.
-        
+
         This method queries the vector store with multiple sentences and returns
         a deduplicated, flattened list of all results sorted by score.
         """
@@ -76,7 +81,7 @@ class ChromaStore:
                 # Skip duplicates (same chunk returned by multiple queries)
                 if doc_id in seen_ids:
                     continue
-                    
+
                 seen_ids.add(doc_id)
                 metadata = ChunkMetadata.model_validate(meta_json)
                 all_chunks.append(
@@ -85,12 +90,26 @@ class ChromaStore:
 
         # Sort by score (L2 distance - lower is better)
         all_chunks.sort(key=lambda x: x.score)
-        
+
         logger.info(f"finished the querying - found {len(all_chunks)} unique results")
         return all_chunks
 
     def count(self) -> int:
         return self.collection.count()
+    def clear(self) -> None:
+        logger.info(f"Clearing collection '{self.collection_name}'")
+        count = self.collection.count()
+        if count > 0:
+            all_ids = self.collection.get()["ids"]
+            self.collection.delete(ids=all_ids)
+            logger.info(f"Cleared {count} documents from collection")
+        else:
+            logger.info("Collection is already empty")
+
+    def delete_collection(self) -> None:
+        logger.warning(f"Deleting collection '{self.collection_name}'")
+        self.client.delete_collection(name=self.collection_name)
+        logger.info(f"Collection '{self.collection_name}' deleted")
 
 
 class RedisCache:
@@ -122,3 +141,7 @@ class RedisCache:
 
     def clear(self) -> None:
         self.cache.clear()
+
+
+def get_store() -> Tuple[ChromaStore, RedisCache]:
+    return ChromaStore(settings.vector_store), RedisCache(settings.redis)
