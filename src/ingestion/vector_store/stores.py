@@ -151,7 +151,8 @@ class RedisCache:
 
 
 def get_RedisStore() -> RedisCache:
-    return  RedisCache(settings.redis)
+    return RedisCache(settings.redis)
+
 
 def get_ChromaStore() -> ChromaStore:
     return ChromaStore(settings.vector_store)

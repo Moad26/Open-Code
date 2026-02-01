@@ -12,8 +12,8 @@ from src.ingestion.vector_store.stores import get_ChromaStore
 from src.utils.config import LibreryConfig
 from src.utils.logger import logger
 
-class LibraryManager:
 
+class LibraryManager:
     def __init__(self, config: LibreryConfig) -> None:
         self.books_dir = Path(config.books_paths)
         self.manifest_path = Path(config.manifest_path)
@@ -117,7 +117,6 @@ class LibraryManager:
         logger.info(f"Chunking {name}...")
         chunked_doc = self.chunker.chunk(parsed_doc)
         logger.info(f"Created {len(chunked_doc)} chunks")
-
 
         logger.info(f"Storing {name}...")
         self.store.ingest(chunks=chunked_doc)
