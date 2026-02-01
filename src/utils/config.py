@@ -167,7 +167,9 @@ class Config:
 
     @staticmethod
     def save(config: ConfigModel, config_file: os.PathLike):
-        with open(config_file, "w") as f:
+        path = Path(config_file)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with open(path, "w") as f:
             yaml.dump(
                 config.model_dump(),
                 f,
