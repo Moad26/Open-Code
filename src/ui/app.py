@@ -31,37 +31,48 @@ class RAGApp(App):
     #chat-view {
         width: 1fr;
         height: 100%;
-        padding: 1 2;
+        layout: vertical;
     }
 
     #message-container {
         height: 1fr;
-        overflow-y: auto;
+        scrollbar-gutter: stable;
     }
 
     Input {
         dock: bottom;
-        margin: 1 0;
+        margin: 1 2;
     }
 
-    .message-content {
-        padding: 1;
-        margin: 1;
-        background: $surface;
-        border: heavy $primary;
-    }
-    
+    /* Base message styling */
     UserMessage {
-        align: right top;
-    }
-
-    UserMessage .message-content {
-        background: $accent;
-        color: $text;
+        width: 100%;
+        height: auto;
+        content-align: right top;
     }
 
     AssistantMessage {
-        align: left top;
+        width: 100%;
+        height: auto;
+        content-align: left top;
+    }
+
+    /* Content bubble styling */
+    .message-content {
+        padding: 1 2;
+        margin: 1;
+        width: auto;
+        max-width: 80%;
+    }
+
+    UserMessage .message-content {
+        background: $primary;
+        color: $text;
+    }
+
+    AssistantMessage .message-content {
+        background: $surface;
+        border: solid $primary;
     }
     """
 
