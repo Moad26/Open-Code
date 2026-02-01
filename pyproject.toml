@@ -21,7 +21,11 @@ dependencies = [
   "pyyaml>=6.0.3",
   "redis>=7.1.0",
   "redisvl>=0.13.2",
+  "rich>=14.2.0",
   "sentence-transformers>=5.2.0",
+  "textual-dev>=1.8.0",
+  "textual[syntax]>=7.5.0",
+  "typer>=0.19.2",
 ]
 
 [tool.pytest.ini_options]

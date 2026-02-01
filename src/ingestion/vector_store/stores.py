@@ -9,6 +9,7 @@ from src.shared.models import (
     CachedPromptResponse,
     ChunkMetadata,
     EmbeddedChunk,
+    Chunk,
     SearchResult,
 )
 from src.utils.config import RedisConfig, VectorStoreConfig, settings
@@ -30,7 +31,8 @@ class ChromaStore:
         logger.info("getting the embedder")
         self.embedder = get_embedder()
 
-    def ingest(self, embch: List[EmbeddedChunk]) -> None:
+    def ingest(self, chunks: List[Chunk]) -> None:
+        embch = self.embedder.embed_chunk(chunks=chunks)
         ids = [str(embed.vector_id) for embed in embch]
         metadatas: List[Metadata] = [
             embed.metadata.model_dump(mode="json") for embed in embch
@@ -96,6 +98,7 @@ class ChromaStore:
 
     def count(self) -> int:
         return self.collection.count()
+
     def clear(self) -> None:
         logger.info(f"Clearing collection '{self.collection_name}'")
         count = self.collection.count()
@@ -110,6 +113,10 @@ class ChromaStore:
         logger.warning(f"Deleting collection '{self.collection_name}'")
         self.client.delete_collection(name=self.collection_name)
         logger.info(f"Collection '{self.collection_name}' deleted")
+
+    def delete_by_filename(self, filename: str) -> None:
+        logger.info(f"Deleting all chunks for: {filename}")
+        self.collection.delete(where={"source_doc_title": filename})
 
 
 class RedisCache:
@@ -143,5 +150,8 @@ class RedisCache:
         self.cache.clear()
 
 
-def get_store() -> Tuple[ChromaStore, RedisCache]:
-    return ChromaStore(settings.vector_store), RedisCache(settings.redis)
+def get_RedisStore() -> RedisCache:
+    return  RedisCache(settings.redis)
+
+def get_ChromaStore() -> ChromaStore:
+    return ChromaStore(settings.vector_store)

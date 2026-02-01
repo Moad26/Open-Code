@@ -5,10 +5,51 @@ from typing import Literal, Optional
 
 import yaml
 from pydantic import BaseModel, Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT_Path = Path(
     os.getenv("PROJECT_ROOT", Path(__file__).resolve().parent.parent.parent)
 )
+MANIFEST_PATH = ROOT_Path / "config" / "manifest"
+
+
+class ProjectPaths(BaseSettings):
+    root: Path = Path(__file__).resolve().parents[3]
+
+    def model_post_init(self, __context):
+        self.config_dir.mkdir(parents=True, exist_ok=True)
+        self.log_dir.mkdir(parents=True, exist_ok=True)
+        self.manifest_path.mkdir(parents=True, exist_ok=True)
+        self.books_dir.mkdir(parents=True, exist_ok=True)
+
+    @property
+    def config_dir(self) -> Path:
+        return self.root / "config"
+
+    @property
+    def books_dir(self) -> Path:
+        return self.root / "books"
+
+    @property
+    def log_dir(self) -> Path:
+        return self.root / "logs"
+
+    @property
+    def manifest_path(self) -> Path:
+        return self.root / "config" / "manifest"
+
+    model_config = SettingsConfigDict(env_prefix="APP_")
+
+
+class LibreryConfig(BaseModel):
+    books_paths: Path = Field(
+        default=ROOT_Path / "books",
+        description="the path for the books",
+    )
+    manifest_path: Path = Field(
+        default=ROOT_Path / "config" / "manifest.json",
+        description="the path for the source truth",
+    )
 
 
 class EmbeddingConfig(BaseModel):
@@ -116,6 +157,7 @@ class ConfigModel(BaseModel):
     vector_store: VectorStoreConfig = Field(default_factory=VectorStoreConfig)
     redis: RedisConfig = Field(default_factory=RedisConfig)
     llm: LLMConfig = Field(default_factory=LLMConfig)
+    librery: LibreryConfig = Field(default_factory=LibreryConfig)
 
 
 class Config:
