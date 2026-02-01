@@ -8,5 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
-
+config/manifest.json
+data/*
+books/*
 *.sqlite3
+logs/*
