@@ -6,11 +6,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.11+-blue.svg" alt="Python 3.11+">
-  <img src="https://img.shields.io/badge/package_manager-uv-blueviolet.svg" alt="uv">
-  <img src="https://img.shields.io/badge/vector_store-ChromaDB-orange.svg" alt="ChromaDB">
-  <img src="https://img.shields.io/badge/LLM-Ollama-green.svg" alt="Ollama">
-  <img src="https://img.shields.io/badge/status-active-success.svg" alt="Status: Active">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11+"/>
+  <img src="https://img.shields.io/badge/uv-Package_Manager-DE5FE9?style=for-the-badge&logo=uv&logoColor=white" alt="uv"/>
+  <img src="https://img.shields.io/badge/ChromaDB-Vector_Store-FF6F00?style=for-the-badge&logo=databricks&logoColor=white" alt="ChromaDB"/>
+  <img src="https://img.shields.io/badge/Ollama-LLM-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama"/>
+  <img src="https://img.shields.io/badge/Status-Active-2EA44F?style=for-the-badge" alt="Status: Active"/>
 </p>
 
 ---
